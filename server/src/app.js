@@ -4,7 +4,8 @@ const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const { amqpServer } = require('./services/amqp');
+const { AMQP_URL } = require('./config/configs');
+const { amqpAPI } = require('./services/amqp');
 
 // Set up the express app
 const app = express();
@@ -23,13 +24,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/', routes);
 
 // AMQP Connection
-amqpServer.start();
+amqpAPI.connect(AMQP_URL);
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}/`);
-
-  const cenas = require('./controllers/sensorsData');
-  cenas.load();
 });
 
 

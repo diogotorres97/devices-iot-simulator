@@ -1,103 +1,52 @@
 const fs = require('fs');
-const path = require('path');
 const { amqpAPI } = require('../services/amqp');
-const router = require('express').Router();
 
-const getDirectories = (source) => fs.readdirSync(source, { withFileTypes: true }).filter((dirent) => dirent.isDirectory()).map((dirent) => dirent.name);
+const initialize = (scenario, scenarioPath, data) => {
+  load(scenarioPath, data);
+  const topics = getTopics(data);
+  generateQueues(scenario, topics);
+};
 
-const data = {};
+const reset = (scenario, data) => {
+  const topics = getTopics(data);
+  purgeQueues(scenario, topics);
+};
 
-const { sleep } = require('../utils/utils');
+const load = (scenarioPath, data) => {
+  if (!fs.existsSync(`${scenarioPath}/sensors-data`)) return;
 
-const loadData = async () => {
-  await sleep(5000);
-  // Data Path
-  const dataPath = path.resolve(`${__dirname}/../data`);
-
-  // Get Cenarios Directories
-  const cenarioDirs = getDirectories(dataPath);
-  console.log(cenarioDirs);
-
-  // For each cenario create an object, iterate data and actuators
-  cenarioDirs.forEach((cenarioDir) => {
-    const cenarioPath = `${dataPath}/${cenarioDir}`;
-    data[cenarioDir] = {};
-    // Process sensors data
-    if (!fs.existsSync(`${cenarioPath}/sensors-data`)) return;
-
-    data[cenarioDir].sensorsData = [];
-    const sensorsDataFiles = fs.readdirSync(`${cenarioPath}/sensors-data`);
-    // Push each data file into array
-    sensorsDataFiles.forEach((sensorDataFileName) => {
-      const sensorDataFile = JSON.parse(fs.readFileSync(`${cenarioPath}/sensors-data/${sensorDataFileName}`));
-      data[cenarioDir].sensorsData.push(...sensorDataFile);
-    });
-
-    // Sort array by timestamp
-    data[cenarioDir].sensorsData.sort((a, b) => a.timestamp - b.timestamp);
-
-    // Get Topics
-    const topics = getTopics(cenarioDir);
-
-    // Create Queues
-    generateQueues(cenarioDir, topics);
-
-    // Process actuators
-    if (!fs.existsSync(`${cenarioPath}/actuators`)) return;
-    data[cenarioDir].actuators = [];
-
-    const actuatorsFiles = fs.readdirSync(`${cenarioPath}/actuators`);
-    actuatorsFiles.forEach((actuatorsFileName) => {
-      const actuatorsFile = JSON.parse(fs.readFileSync(`${cenarioPath}/actuators/${actuatorsFileName}`));
-      data[cenarioDir].actuators.push(...actuatorsFile);
-    });
-
-    generateRoutes(cenarioDir, data[cenarioDir].actuators);
+  const sensorsDataFiles = fs.readdirSync(`${scenarioPath}/sensors-data`);
+  sensorsDataFiles.forEach((sensorDataFileName) => {
+    const sensorDataFile = JSON.parse(fs.readFileSync(`${scenarioPath}/sensors-data/${sensorDataFileName}`));
+    data.sensorsData.push(...sensorDataFile);
   });
 
-  // Close files / dirs
-  publishData('agriculture');
+  // Sort messages by timestamp
+  data.sensorsData.sort((a, b) => a.payload.timestamp - b.payload.timestamp);
 };
 
-// Actuators
-const generateRoutes = (cenarioDir, actuators) => {
-  actuators.forEach((actuator) => {
-    // Receive commands and update current actuator value
-    amqpAPI.assertQueue(`${cenarioDir}/${actuator.topic}/command`);
-    amqpAPI.consumeMessage(`${cenarioDir}/${actuator.topic}/command`, (message) => {
-      const messageObject = amqpAPI.parseMessage(message);
-
-      actuator.value = messageObject;
-    });
-
-    // Generate route to retrieve actuator status
-    // Not needed due to generic route http
-  });
+const getTopics = (data) => {
+  const topics = data.sensorsData.map((message) => message.topic);
+  return Array.from(new Set(topics));
 };
 
-
-// Sensors Data
-const getTopics = (cenarioDir) => {
-  let topics = data[cenarioDir].sensorsData.map((data) => data.topic);
-  topics = Array.from(new Set(topics));
-  return topics;
+const generateQueues = (scenario, topics) => {
+  topics.forEach((topic) => amqpAPI.assertQueue(`${scenario}/${topic}`));
 };
 
-const generateQueues = (cenarioDir, topics) => {
-  topics.forEach((topic) => amqpAPI.assertQueue(`${cenarioDir}/${topic}`));
+const purgeQueues = (scenario, topics) => {
+  topics.forEach((topic) => amqpAPI.purgeQueue(`${scenario}/${topic}`));
 };
 
-const purgeQueues = (cenarioDir, topics) => {
-  topics.forEach((topic) => amqpAPI.purgeQueue(`${cenarioDir}/${topic}`));
-};
-
-const publishData = (cenarioDir) => {
-  data[cenarioDir].sensorsData.forEach((message) => {
-    amqpAPI.publishMessage(`${cenarioDir}/${message.topic}`, message.payload);
+// TODO: Add sleep between messages
+const publish = (scenario, data) => {
+  data.sensorsData.forEach((message) => {
+    amqpAPI.publishMessage(`${scenario}/${message.topic}`, message.payload);
   });
 };
 
 module.exports = {
-  load: loadData,
-  data,
+  initialize,
+  publish,
+  reset,
 };

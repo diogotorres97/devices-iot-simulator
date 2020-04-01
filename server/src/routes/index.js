@@ -4,10 +4,10 @@ const router = require('express').Router();
  Routes
  ++++++++++++++++++++++++++++++++++++++++++++++*/
 
-const todos = require('./todos');
+const main = require('./main');
 
 
-router.use('/api/', todos);
+router.use('/', main);
 
 
 module.exports = router;
