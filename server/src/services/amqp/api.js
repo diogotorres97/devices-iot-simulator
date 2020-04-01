@@ -52,6 +52,12 @@ function assertQueue(queueName) {
   });
 }
 
+function purgeQueue(queueName) {
+  amqpChannel.purgeQueue(queueName, (err, _ok) => {
+    if (closeOnErr(err)) return;
+  });
+}
+
 function publishMessage(queueName, message) {
   amqpChannel.sendToQueue(queueName, Buffer.from(JSON.stringify(message)));
   console.log(`[AMQP] Send message: ${message}`);
