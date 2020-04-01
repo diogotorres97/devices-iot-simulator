@@ -1,7 +1,5 @@
-const todoController = require('./todos');
-const todoItemsController = require('./todoitems');
+const sensorsDataController = require('./sensorsData');
 
 module.exports = {
-  todoController,
-  todoItemsController,
+  sensorsDataController,
 };

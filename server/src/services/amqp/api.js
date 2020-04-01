@@ -4,7 +4,7 @@ let amqpConnection;
 let amqpChannel;
 let isConnecting = false;
 
-function connect(amqpUrl, queuesNameArray) {
+function connect(amqpUrl) {
   if (isConnecting) return;
   isConnecting = true;
 
@@ -13,36 +13,40 @@ function connect(amqpUrl, queuesNameArray) {
 
     if (err) {
       console.error('[AMQP]', err.message);
-      return setTimeout(connect, 1000, amqpUrl, queuesNameArray);
+      return setTimeout(connect, 1000, amqpUrl);
     }
+
     connection.on('error', (err) => {
       if (err.message !== 'Connection closing') {
         console.error('[AMQP] connection error', err.message);
       }
     });
+
     connection.on('close', () => {
       console.error('[AMQP] reconnecting');
-      return setTimeout(connect, 1000, amqpUrl, queuesNameArray);
+      return setTimeout(connect, 1000, amqpUrl);
     });
+
     console.log('[AMQP] connected');
     amqpConnection = connection;
-    createChannel(queuesNameArray);
+    createChannel();
   });
 }
 
-function createChannel(queuesNameArray) {
+function createChannel() {
   amqpConnection.createChannel((err, channel) => {
     if (closeOnErr(err)) return;
+
     channel.on('error', (err) => {
       console.error('[AMQP] channel error', err.message);
     });
+
     channel.on('close', () => {
       console.log('[AMQP] channel closed');
     });
 
     channel.prefetch(10);
     amqpChannel = channel;
-    queuesNameArray.forEach(queueName => assertQueue(queueName));
   });
 }
 
@@ -90,6 +94,8 @@ function closeOnErr(err) {
 
 module.exports = {
   connect,
+  assertQueue,
+  purgeQueue,
   publishMessage,
   consumeMessage,
   createMessage,

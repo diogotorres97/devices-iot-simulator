@@ -27,6 +27,10 @@ amqpServer.start();
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}/`);
+
+  const cenas = require('./controllers/sensorsData');
+  cenas.load();
 });
+
 
 module.exports = app;
