@@ -2,7 +2,7 @@ const fs = require('fs');
 const { amqpAPI } = require('../services/amqp');
 const { sleep } = require('../utils/utils');
 
-const MESSAGE_FREQUENCY = 10000;
+const MESSAGE_FREQUENCY = 1000;
 
 const initialize = async (scenario, scenarioPath, data) => {
   load(scenarioPath, data);

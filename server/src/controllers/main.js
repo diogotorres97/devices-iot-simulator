@@ -10,8 +10,6 @@ const data = {};
 
 const load = async () => {
   const scenarios = getScenarios();
-  // console.log(scenarios.map((scenario) => loadScenario(scenario)))
-  // for await(let scenario of )
   await Promise.all(scenarios.map((scenario) => loadScenario(scenario)));
 };
 
@@ -44,7 +42,7 @@ const checkIfScenarioExists = (scenario) => getScenarios().includes(scenario);
 
 const resetScenario = async (scenario) => {
   await Promise.all([
-  // Process sensors data
+    // Process sensors data
     sensorsDataController.reset(scenario, data[scenario]),
 
     // Process actuators
