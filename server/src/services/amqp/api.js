@@ -86,7 +86,7 @@ function consumeMessage(queueName, handleMessage) {
 
 function parseMessage(msg) {
   const messageString = msg.content.toString();
-  const messageObject = JSON.parse(messageString);
+  const messageObject = JSON.parse(JSON.stringify(messageString));
   console.log(`[AMQP] Consume a message: ${messageString}`);
   return messageObject;
 }

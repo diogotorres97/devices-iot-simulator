@@ -74,6 +74,17 @@ router.get('/:scenario/validate/:messageFrequency?', async (req, res) => {
   }
 });
 
+router.get('/:scenario/actuators', (req, res) => {
+  const { scenario } = req.params;
+
+  try {
+    const devices = mainController.getActuators(scenario);
+    res.status(200).send(devices);
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+});
+
 router.get('/:scenario/:actuator/status', (req, res) => {
   const { scenario, actuator } = req.params;
 

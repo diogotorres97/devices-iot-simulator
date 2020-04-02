@@ -2,6 +2,8 @@ const path = require('path');
 
 const actuatorsController = require('./actuators');
 const sensorsDataController = require('./sensorsData');
+const validationController = require('./validation');
+
 const { sleep, getDirectories } = require('../utils/utils');
 
 const DATA_PATH = path.resolve(`${__dirname}/../data`);
@@ -25,7 +27,7 @@ const reset = async () => {
 
 const loadScenario = async (scenario) => {
   const scenarioPath = `${DATA_PATH}/${scenario}`;
-  data[scenario] = { sensorsData: [], actuators: [] };
+  data[scenario] = { sensorsData: [], actuators: [], validation: [] };
 
   await Promise.all([
     // Process sensors data
@@ -33,6 +35,8 @@ const loadScenario = async (scenario) => {
 
     // Process actuators
     actuatorsController.initialize(scenario, scenarioPath, data[scenario]),
+
+    validationController.load(scenarioPath, data[scenario]),
   ]);
 };
 
@@ -59,8 +63,11 @@ const startScenario = async (scenario, messageFrequency) => {
 };
 
 const validateScenario = async (scenario, messageFrequency) => {
-  // Start publishing Data
+  // Sanity check to clear queues
   await resetScenario(scenario);
+
+  // Initiate validation state
+  validationController.initialize(data[scenario]);
 
   // Start publishing Data
   await sensorsDataController.publish(scenario, data[scenario], messageFrequency);
@@ -69,6 +76,7 @@ const validateScenario = async (scenario, messageFrequency) => {
   await sleep(5000);
 
   // Validate actuators final state
+  return validationController.validate(data[scenario]);
 };
 
 const getActuators = (scenario) => data[scenario].actuators;
