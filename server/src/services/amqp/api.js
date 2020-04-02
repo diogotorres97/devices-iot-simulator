@@ -8,74 +8,80 @@ function connect(amqpUrl) {
   if (isConnecting) return;
   isConnecting = true;
 
-  amqp.connect(amqpUrl, (err, connection) => {
-    isConnecting = false;
+  return new Promise((resolve) => {
+    amqp.connect(amqpUrl, async (err, connection) => {
+      isConnecting = false;
 
-    if (err) {
-      console.error('[AMQP]', err.message);
-      return setTimeout(connect, 1000, amqpUrl);
-    }
-
-    connection.on('error', (err) => {
-      if (err.message !== 'Connection closing') {
-        console.error('[AMQP] connection error', err.message);
+      if (err) {
+        console.error('[AMQP]', err.message);
+        resolve();
+        return setTimeout(connect, 1000, amqpUrl);
       }
-    });
 
-    connection.on('close', () => {
-      console.error('[AMQP] reconnecting');
-      return setTimeout(connect, 1000, amqpUrl);
-    });
+      connection.on('error', (err) => {
+        if (err.message !== 'Connection closing') {
+          console.error('[AMQP] connection error', err.message);
+        }
+      });
 
-    console.log('[AMQP] connected');
-    amqpConnection = connection;
-    createChannel();
+      connection.on('close', () => {
+        console.error('[AMQP] reconnecting');
+        return setTimeout(connect, 1000, amqpUrl);
+      });
+
+      console.log('[AMQP] connected');
+      amqpConnection = connection;
+      await createChannel();
+      resolve();
+    });
   });
 }
 
 function createChannel() {
-  amqpConnection.createChannel((err, channel) => {
-    if (closeOnErr(err)) return;
+  return new Promise((resolve) => {
+    amqpConnection.createChannel((err, channel) => {
+      if (closeOnErr(err)) return;
 
-    channel.on('error', (err) => {
-      console.error('[AMQP] channel error', err.message);
+      channel.on('error', (err) => {
+        console.error('[AMQP] channel error', err.message);
+      });
+
+      channel.on('close', () => {
+        console.log('[AMQP] channel closed');
+      });
+
+      channel.prefetch(10);
+      amqpChannel = channel;
+      resolve();
     });
-
-    channel.on('close', () => {
-      console.log('[AMQP] channel closed');
-    });
-
-    channel.prefetch(10);
-    amqpChannel = channel;
   });
 }
 
 function assertQueue(queueName) {
-  amqpChannel.assertQueue(queueName, { durable: false }, (err, _ok) => {
-    if (closeOnErr(err)) return;
+  return new Promise((resolve) => {
+    amqpChannel.assertQueue(queueName, { durable: false }, (err, _ok) => {
+      if (closeOnErr(err)) return;
+      resolve(_ok);
+    });
   });
 }
 
 function purgeQueue(queueName) {
-  amqpChannel.purgeQueue(queueName, (err, _ok) => {
-    if (closeOnErr(err)) return;
+  return new Promise((resolve) => {
+    amqpChannel.purgeQueue(queueName, (err, _ok) => {
+      if (closeOnErr(err)) return;
+      resolve(_ok);
+    });
   });
 }
 
 function publishMessage(queueName, message) {
   amqpChannel.sendToQueue(queueName, Buffer.from(JSON.stringify(message)));
-  console.log(`[AMQP] Send message: ${message}`);
+  console.log(`[AMQP] Send message: ${JSON.stringify(message)}`);
 }
 
 function consumeMessage(queueName, handleMessage) {
   amqpChannel.consume(queueName, handleMessage, { noAck: true });
-}
-
-function createMessage(type, payload) {
-  return {
-    type,
-    payload,
-  };
 }
 
 function parseMessage(msg) {
@@ -88,8 +94,11 @@ function parseMessage(msg) {
 function closeOnErr(err) {
   if (!err) return false;
   console.error('[AMQP] error', err);
-  amqpConnection.close();
-  return true;
+  try {
+    amqpConnection.close();
+  } finally {
+    return true;
+  }
 }
 
 module.exports = {
@@ -98,6 +107,5 @@ module.exports = {
   purgeQueue,
   publishMessage,
   consumeMessage,
-  createMessage,
   parseMessage,
 };

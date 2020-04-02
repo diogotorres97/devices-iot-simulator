@@ -23,12 +23,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Require our routes into the application.
 app.use('/', routes);
 
-// AMQP Connection
-amqpAPI.connect(AMQP_URL);
-
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}/`);
-});
-
+(async () => {
+  // AMQP Connection
+  try {
+    await amqpAPI.connect(AMQP_URL);
+  } finally {
+    app.listen(port, () => {
+      console.log(`Server running at http://localhost:${port}/`);
+    });
+  }
+})();
 
 module.exports = app;

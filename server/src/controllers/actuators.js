@@ -1,15 +1,14 @@
 const fs = require('fs');
 const { amqpAPI } = require('../services/amqp');
 
-
-const initialize = (scenario, scenarioPath, data) => {
+const initialize = async (scenario, scenarioPath, data) => {
   load(scenarioPath, data);
-  generateQueues(scenario, data);
+  await generateQueues(scenario, data);
 };
 
-const reset = (scenario, data) => {
+const reset = async (scenario, data) => {
   const topics = getTopics(data);
-  purgeQueues(scenario, topics);
+  await purgeQueues(scenario, topics);
   resetDefaultValues(data);
 };
 
@@ -23,21 +22,23 @@ const load = (scenarioPath, data) => {
   });
 };
 
-const generateQueues = (scenario, data) => {
-  data.actuators.forEach((actuator) => {
+const generateQueues = async (scenario, data) => {
+  for await (const actuator of data.actuators) {
     // Create commands Queue
-    amqpAPI.assertQueue(`${scenario}/${actuator.topic}/command`);
+    await amqpAPI.assertQueue(`${scenario}/${actuator.topic}/command`);
 
     // Receive commands and update current actuator value
     amqpAPI.consumeMessage(`${scenario}/${actuator.topic}/command`, (message) => {
       const messageObject = amqpAPI.parseMessage(message);
       actuator.value = messageObject;
     });
-  });
+  }
 };
 
-const purgeQueues = (scenario, topics) => {
-  topics.forEach((topic) => amqpAPI.purgeQueue(`${scenario}/${topic}/command`));
+const purgeQueues = async (scenario, topics) => {
+  for await (const topic of topics) {
+    await amqpAPI.purgeQueue(`${scenario}/${topic}/command`);
+  }
 };
 
 const resetDefaultValues = (data) => {

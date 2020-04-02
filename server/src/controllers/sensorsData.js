@@ -1,15 +1,18 @@
 const fs = require('fs');
 const { amqpAPI } = require('../services/amqp');
+const { sleep } = require('../utils/utils');
 
-const initialize = (scenario, scenarioPath, data) => {
+const MESSAGE_FREQUENCY = 10000;
+
+const initialize = async (scenario, scenarioPath, data) => {
   load(scenarioPath, data);
   const topics = getTopics(data);
-  generateQueues(scenario, topics);
+  await generateQueues(scenario, topics);
 };
 
-const reset = (scenario, data) => {
+const reset = async (scenario, data) => {
   const topics = getTopics(data);
-  purgeQueues(scenario, topics);
+  await purgeQueues(scenario, topics);
 };
 
 const load = (scenarioPath, data) => {
@@ -30,19 +33,23 @@ const getTopics = (data) => {
   return Array.from(new Set(topics));
 };
 
-const generateQueues = (scenario, topics) => {
-  topics.forEach((topic) => amqpAPI.assertQueue(`${scenario}/${topic}`));
+const generateQueues = async (scenario, topics) => {
+  for await (const topic of topics) {
+    await amqpAPI.assertQueue(`${scenario}/${topic}`);
+  }
 };
 
-const purgeQueues = (scenario, topics) => {
-  topics.forEach((topic) => amqpAPI.purgeQueue(`${scenario}/${topic}`));
+const purgeQueues = async (scenario, topics) => {
+  for await (const topic of topics) {
+    await amqpAPI.purgeQueue(`${scenario}/${topic}`);
+  }
 };
 
-// TODO: Add sleep between messages
-const publish = (scenario, data) => {
-  data.sensorsData.forEach((message) => {
+const publish = async (scenario, data, messageFrequency) => {
+  for await (const message of data.sensorsData) {
     amqpAPI.publishMessage(`${scenario}/${message.topic}`, message.payload);
-  });
+    await sleep(messageFrequency || MESSAGE_FREQUENCY);
+  }
 };
 
 module.exports = {

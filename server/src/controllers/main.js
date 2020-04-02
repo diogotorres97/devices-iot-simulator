@@ -8,57 +8,84 @@ const DATA_PATH = path.resolve(`${__dirname}/../data`);
 
 const data = {};
 
-
-const load = () => {
+const load = async () => {
   const scenarios = getScenarios();
-  scenarios.forEach((scenario) => loadScenario(scenario));
+  // console.log(scenarios.map((scenario) => loadScenario(scenario)))
+  // for await(let scenario of )
+  await Promise.all(scenarios.map((scenario) => loadScenario(scenario)));
 };
 
-const loadScenario = (scenario) => {
+const start = async (messageFrequency) => {
+  const scenarios = getScenarios();
+  await Promise.all(scenarios.map((scenario) => startScenario(scenario, messageFrequency)));
+};
+
+const reset = async () => {
+  const scenarios = getScenarios();
+  await Promise.all(scenarios.map((scenario) => resetScenario(scenario)));
+};
+
+const loadScenario = async (scenario) => {
   const scenarioPath = `${DATA_PATH}/${scenario}`;
   data[scenario] = { sensorsData: [], actuators: [] };
-  // Process sensors data
-  sensorsDataController.initialize(scenario, scenarioPath, data[scenario]);
 
-  // Process actuators
-  actuatorsController.initialize(scenario, scenarioPath, data[scenario]);
+  await Promise.all([
+    // Process sensors data
+    sensorsDataController.initialize(scenario, scenarioPath, data[scenario]),
+
+    // Process actuators
+    actuatorsController.initialize(scenario, scenarioPath, data[scenario]),
+  ]);
 };
 
 const getScenarios = () => getDirectories(DATA_PATH);
 
 const checkIfScenarioExists = (scenario) => getScenarios().includes(scenario);
 
-const resetScenario = (scenario) => {
+const resetScenario = async (scenario) => {
+  await Promise.all([
   // Process sensors data
-  sensorsDataController.reset(scenario, data[scenario]);
+    sensorsDataController.reset(scenario, data[scenario]),
 
-  // Process actuators
-  actuatorsController.reset(scenario, data[scenario]);
+    // Process actuators
+    actuatorsController.reset(scenario, data[scenario]),
+  ]);
 };
 
-const startScenario = (scenario) => {
+const startScenario = async (scenario, messageFrequency) => {
   // Sanity check to clear queues
-  // resetScenario(scenario);
+  await resetScenario(scenario);
 
   // Start publishing Data
-  sensorsDataController.publish(scenario, data[scenario]);
+  await sensorsDataController.publish(scenario, data[scenario], messageFrequency);
 };
 
-const validateScenario = (scenario) => {
-  // Sanity check to clear queues
-  // resetScenario(scenario);
+const validateScenario = async (scenario, messageFrequency) => {
+  // Start publishing Data
+  await resetScenario(scenario);
 
   // Start publishing Data
-  sensorsDataController.publish(scenario, data[scenario]);
+  await sensorsDataController.publish(scenario, data[scenario], messageFrequency);
 
   // Sleep for few seconds
+  await sleep(5000);
 
   // Validate actuators final state
 };
 
+const getActuators = (scenario) => data[scenario].actuators;
+
+const getsensorsData = (scenario) => data[scenario].sensorsData;
+
 module.exports = {
+  load,
+  start,
+  reset,
+  checkIfScenarioExists,
   loadScenario,
   startScenario,
   resetScenario,
-  data,
+  validateScenario,
+  getActuators,
+  getsensorsData,
 };
