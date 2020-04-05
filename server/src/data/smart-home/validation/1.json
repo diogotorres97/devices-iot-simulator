@@ -1,12 +1,7 @@
 [
     {
-      "topic": "roof-window",
+      "topic": "heat-system",
       "initialState": 0,
       "finalState": 1
-    },
-    {
-      "topic": "roof-lux-controller",
-      "initialState": 1,
-      "finalState": 0
     }
 ]

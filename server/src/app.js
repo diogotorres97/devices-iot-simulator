@@ -5,7 +5,7 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const { AMQP_URL } = require('./config/configs');
-const { amqpAPI } = require('./services/amqp');
+const { mqttAPI } = require('./services/mqtt');
 
 // Set up the express app
 const app = express();
@@ -24,9 +24,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/', routes);
 
 (async () => {
-  // AMQP Connection
+  // MQTT Connection
   try {
-    await amqpAPI.connect(AMQP_URL);
+    await mqttAPI.connect(AMQP_URL);
   } finally {
     app.listen(port, () => {
       console.log(`Server running at http://localhost:${port}/`);

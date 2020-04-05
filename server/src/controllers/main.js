@@ -46,9 +46,6 @@ const checkIfScenarioExists = (scenario) => getScenarios().includes(scenario);
 
 const resetScenario = async (scenario) => {
   await Promise.all([
-    // Process sensors data
-    sensorsDataController.reset(scenario, data[scenario]),
-
     // Process actuators
     actuatorsController.reset(scenario, data[scenario]),
   ]);
