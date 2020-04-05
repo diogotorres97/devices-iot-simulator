@@ -1,18 +1,11 @@
 const fs = require('fs');
-const { amqpAPI } = require('../services/amqp');
+const { mqttAPI } = require('../services/mqtt');
 const { sleep } = require('../utils/utils');
 
 const MESSAGE_FREQUENCY = 1000;
 
 const initialize = async (scenario, scenarioPath, data) => {
   load(scenarioPath, data);
-  const topics = getTopics(data);
-  await generateQueues(scenario, topics);
-};
-
-const reset = async (scenario, data) => {
-  const topics = getTopics(data);
-  await purgeQueues(scenario, topics);
 };
 
 const load = (scenarioPath, data) => {
@@ -33,21 +26,9 @@ const getTopics = (data) => {
   return Array.from(new Set(topics));
 };
 
-const generateQueues = async (scenario, topics) => {
-  for await (const topic of topics) {
-    await amqpAPI.assertQueue(`${scenario}/${topic}`);
-  }
-};
-
-const purgeQueues = async (scenario, topics) => {
-  for await (const topic of topics) {
-    await amqpAPI.purgeQueue(`${scenario}/${topic}`);
-  }
-};
-
 const publish = async (scenario, data, messageFrequency) => {
   for await (const message of data.sensorsData) {
-    amqpAPI.publishMessage(`${scenario}/${message.topic}`, message.payload);
+    mqttAPI.publishMessage(`${scenario}/${message.topic}`, message.payload);
     await sleep(messageFrequency || MESSAGE_FREQUENCY);
   }
 };
@@ -55,5 +36,4 @@ const publish = async (scenario, data, messageFrequency) => {
 module.exports = {
   initialize,
   publish,
-  reset,
 };

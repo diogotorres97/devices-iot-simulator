@@ -1,3 +1,3 @@
 module.exports = {
-  AMQP_URL: 'amqp://rabbitmq',
+  AMQP_URL: 'mqtt://mosquitto',
 };
