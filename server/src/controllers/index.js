@@ -1,7 +1,11 @@
-const todoController = require('./todos');
-const todoItemsController = require('./todoitems');
+const actuatorsController = require('./actuators');
+const mainController = require('./main');
+const sensorsDataController = require('./sensorsData');
+const validationController = require('./sensorsData');
 
 module.exports = {
-  todoController,
-  todoItemsController,
+  actuatorsController,
+  mainController,
+  sensorsDataController,
+  validationController,
 };

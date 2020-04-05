@@ -1,35 +1,33 @@
 version: "3"
 
 services:
-  template-server:
-    image: template-server
+  sensors-fake-server:
+    image: sensors-fake-server
     command: npm run dev
     build: server
     volumes:
       - ./server:/usr/src/app
       - /usr/src/app/node_modules
-    container_name: template-server
+    container_name: sensors-fake-server
     ports:
       - 3000:3000
     environment:
       ENVIRONMENT: development
     depends_on:
-      - template-psqldb
+      - mosquitto
 
-  template-psqldb:
-    image: postgres:11-alpine
-    container_name: template-psqldb
+  mosquitto:
+    image: eclipse-mosquitto:1.6
+    container_name: mosquitto
     ports:
-      - 5432:5432
-    environment:
-      - POSTGRES_USER=user
-      - POSTGRES_PASSWORD=password
-      - POSTGRES_DB=template
+      - 1883:1883
+      - 9001:9001
 
-  template-pgadmin:
-    image: thajeztah/pgadmin4
-    container_name: template-pgadmin
-    ports:
-      - 5050:5050
-    depends_on:
-      - template-psqldb
+  # rabbitmq:
+  #   image: rabbitmq:3-management
+  #   container_name: rabbitmq
+  #   command: "/bin/bash -c \"rabbitmq-plugins enable rabbitmq_mqtt; rabbitmq-server\""
+  #   ports:
+  #     - 15672:15672
+  #     - 5672:5672
+  #     - 1883:1883

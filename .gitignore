@@ -65,3 +65,5 @@ api-docs/
 /dist10
 
 .idea
+
+package-lock.json
