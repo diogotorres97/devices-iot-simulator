@@ -1,0 +1,306 @@
+{
+	"info": {
+		"_postman_id": "a8feec39-809d-477f-93ab-57607f40d57b",
+		"name": "Sensors-Fake-Server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Load Scenarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/load",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"load"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Scenarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/scenarios",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"scenarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Start Scenarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/start",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"start"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Scenarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/reset",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reset"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Topics Scenarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/topics",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"topics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Load Specific Scenario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/:scenario/load",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						":scenario",
+						"load"
+					],
+					"variable": [
+						{
+							"key": "scenario",
+							"value": "smart-home"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Start Specific Scenario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/:scenario/start/100",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						":scenario",
+						"start",
+						"100"
+					],
+					"variable": [
+						{
+							"key": "scenario",
+							"value": "smart-home"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Specific Scenario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/:scenario/reset",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						":scenario",
+						"reset"
+					],
+					"variable": [
+						{
+							"key": "scenario",
+							"value": "smart-home"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validate Specific Scenario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/:scenario/validate",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						":scenario",
+						"validate"
+					],
+					"variable": [
+						{
+							"key": "scenario",
+							"value": "smart-home"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Status Specific device from Scenario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/:scenario/:actuator/status",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						":scenario",
+						":actuator",
+						"status"
+					],
+					"variable": [
+						{
+							"key": "scenario",
+							"value": "smart-home"
+						},
+						{
+							"key": "actuator",
+							"value": "heat-system"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sensors Data from Specific Scenario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/:scenario/sensorsData",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						":scenario",
+						"sensorsData"
+					],
+					"variable": [
+						{
+							"key": "scenario",
+							"value": "smart-home"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actuators from Specific Scenario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/:scenario/actuators",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						":scenario",
+						"actuators"
+					],
+					"variable": [
+						{
+							"key": "scenario",
+							"value": "smart-home"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Topics from Specific Scenario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/:scenario/topics",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						":scenario",
+						"topics"
+					],
+					"variable": [
+						{
+							"key": "scenario",
+							"value": "smart-home"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

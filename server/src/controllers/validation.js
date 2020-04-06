@@ -7,6 +7,16 @@ const initialize = (data) => {
   });
 };
 
+const load = (scenarioPath, data) => {
+  if (!fs.existsSync(`${scenarioPath}/validation`)) return;
+
+  const validationFiles = fs.readdirSync(`${scenarioPath}/validation`);
+  validationFiles.forEach((validationFileName) => {
+    const validationFile = JSON.parse(fs.readFileSync(`${scenarioPath}/validation/${validationFileName}`));
+    data.validation.push(...validationFile);
+  });
+};
+
 const validate = (data) => {
   let validation = true;
   data.validation.forEach((actuatorValidate) => {
@@ -19,18 +29,8 @@ const validate = (data) => {
   return validation;
 };
 
-const load = (scenarioPath, data) => {
-  if (!fs.existsSync(`${scenarioPath}/validation`)) return;
-
-  const validationFiles = fs.readdirSync(`${scenarioPath}/validation`);
-  validationFiles.forEach((validationFileName) => {
-    const validationFile = JSON.parse(fs.readFileSync(`${scenarioPath}/validation/${validationFileName}`));
-    data.validation.push(...validationFile);
-  });
-};
-
 module.exports = {
   initialize,
-  validate,
   load,
+  validate,
 };

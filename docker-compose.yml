@@ -22,12 +22,3 @@ services:
     ports:
       - 1883:1883
       - 9001:9001
-
-  # rabbitmq:
-  #   image: rabbitmq:3-management
-  #   container_name: rabbitmq
-  #   command: "/bin/bash -c \"rabbitmq-plugins enable rabbitmq_mqtt; rabbitmq-server\""
-  #   ports:
-  #     - 15672:15672
-  #     - 5672:5672
-  #     - 1883:1883

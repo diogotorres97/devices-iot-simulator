@@ -1,3 +1,3 @@
 module.exports = {
-  AMQP_URL: 'mqtt://mosquitto',
+  MQTT_URL: 'mqtt://mosquitto',
 };

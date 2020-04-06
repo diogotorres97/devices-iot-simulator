@@ -30,68 +30,19 @@ router.get('/reset', async (_, res) => {
   }
 });
 
-router.get('/:scenario/load', async (req, res) => {
-  const { scenario } = req.params;
-
+router.get('/scenarios', async (_, res) => {
   try {
-    await mainController.loadScenario(scenario);
-    res.status(200).send();
+    const scenarios = await mainController.getScenarios();
+    res.status(200).send(scenarios);
   } catch (error) {
     res.status(400).send(error.message);
   }
 });
 
-router.get('/:scenario/start/:messageFrequency?', async (req, res) => {
-  const { scenario, messageFrequency } = req.params;
-
+router.get('/topics', async (_, res) => {
   try {
-    await mainController.startScenario(scenario, messageFrequency);
-    res.status(200).send();
-  } catch (error) {
-    res.status(400).send(error.message);
-  }
-});
-
-router.get('/:scenario/reset', async (req, res) => {
-  const { scenario } = req.params;
-
-  try {
-    await mainController.resetScenario(scenario);
-    res.status(200).send();
-  } catch (error) {
-    res.status(400).send(error.message);
-  }
-});
-
-router.get('/:scenario/validate/:messageFrequency?', async (req, res) => {
-  const { scenario, messageFrequency } = req.params;
-
-  try {
-    const validate = await mainController.validateScenario(scenario, messageFrequency);
-    res.status(200).send(validate);
-  } catch (error) {
-    res.status(400).send(error.message);
-  }
-});
-
-router.get('/:scenario/actuators', (req, res) => {
-  const { scenario } = req.params;
-
-  try {
-    const devices = mainController.getActuators(scenario);
-    res.status(200).send(devices);
-  } catch (error) {
-    res.status(400).send(error.message);
-  }
-});
-
-router.get('/:scenario/:actuator/status', (req, res) => {
-  const { scenario, actuator } = req.params;
-
-  try {
-    const device = mainController.getActuators(scenario)
-      .filter((elem) => elem.topic === actuator);
-    res.status(200).send(device);
+    const scenariosInfo = await mainController.getScenariosInfo();
+    res.status(200).send(scenariosInfo);
   } catch (error) {
     res.status(400).send(error.message);
   }

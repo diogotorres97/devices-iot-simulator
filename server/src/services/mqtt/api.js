@@ -11,7 +11,7 @@ function subscribeQueue(queueName) {
 }
 
 function publishMessage(queueName, message) {
-  console.log(`[AMQP] Send message: ${JSON.stringify(message)}`);
+  console.log(`[MQTT] Send message: ${JSON.stringify(message)}`);
 
   return mqttClient.publish(queueName, Buffer.from(JSON.stringify(message)));
 }
@@ -23,7 +23,7 @@ function consumeMessage(handleMessage) {
 function parseMessage(msg) {
   const messageString = msg.toString();
   const messageObject = JSON.parse(JSON.stringify(messageString));
-  console.log(`[AMQP] Consume a message: ${messageString}`);
+  console.log(`[MQTT] Consume a message: ${messageString}`);
   return messageObject;
 }
 

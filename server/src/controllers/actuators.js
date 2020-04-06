@@ -22,7 +22,7 @@ const load = (scenarioPath, data) => {
 
 const subscribeQueues = async (scenario, data) => {
   for await (const actuator of data.actuators) {
-    // Create commands Queue
+    // Subscribe commands queue
     await mqttAPI.subscribeQueue(`${scenario}/${actuator.topic}/command`);
 
     // Receive commands and update current actuator value
@@ -47,4 +47,5 @@ const getTopics = (data) => {
 module.exports = {
   initialize,
   reset,
+  getTopics,
 };

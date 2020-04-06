@@ -36,4 +36,5 @@ const publish = async (scenario, data, messageFrequency) => {
 module.exports = {
   initialize,
   publish,
+  getTopics,
 };
