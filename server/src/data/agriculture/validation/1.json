@@ -1,12 +1,12 @@
 [
-    {
-      "topic": "roof-window",
-      "inicialState": 0,
-      "finalState": 1
-    },
-    {
-      "topic": "roof-lux-controller",
-      "inicialState": 0,
-      "finalState": 0
-    }
+  {
+    "topic": "roof-window",
+    "inicialState": 0,
+    "finalState": 1
+  },
+  {
+    "topic": "roof-lux-controller",
+    "inicialState": 0,
+    "finalState": 0
+  }
 ]
