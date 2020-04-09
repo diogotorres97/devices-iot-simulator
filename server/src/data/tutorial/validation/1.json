@@ -1,0 +1,7 @@
+[
+  {
+    "topic": "alarm",
+    "initialState": "OFF",
+    "finalState": "ON"
+  }
+]
