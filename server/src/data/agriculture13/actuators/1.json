@@ -1,0 +1,14 @@
+[
+  {
+    "topic": "roof-window",
+    "defaultValue": "0"
+  },
+  {
+    "topic": "water-system",
+    "defaultValue": "OFF"
+  },
+  {
+    "topic": "heat-system",
+    "defaultValue": "OFF"
+  }
+]

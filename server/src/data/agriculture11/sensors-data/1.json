@@ -1,0 +1,38 @@
+[
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "SENSOR-NODE-3-MOZIoT",
+      "sensor": "dht11",
+      "hum-percent": 80,
+      "temp-C": 23,
+      "heatindex-C": 14.712,
+      "dewpoint": 5.555468,
+      "timestamp": 1585673987
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "SENSOR-NODE-3-MOZIoT",
+      "sensor": "dht11",
+      "hum-percent": 80,
+      "temp-C": 22.5,
+      "heatindex-C": 14.712,
+      "dewpoint": 5.555468,
+      "timestamp": 1585673988
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "SENSOR-NODE-3-MOZIoT",
+      "sensor": "dht11",
+      "hum-percent": 80,
+      "temp-C": 22.1,
+      "heatindex-C": 14.712,
+      "dewpoint": 5.555468,
+      "timestamp": 1585673989
+    }
+  }
+]

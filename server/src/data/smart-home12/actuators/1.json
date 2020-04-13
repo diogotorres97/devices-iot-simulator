@@ -1,0 +1,18 @@
+[
+  {
+    "topic": "water-heat-controller",
+    "defaultValue": "OFF"
+  },
+  {
+    "topic": "lux-readings",
+    "defaultValue": 40
+  },
+  {
+    "topic": "kitchen-lights",
+    "defaultValue": "OFF"
+  },
+  {
+    "topic": "blinds-controller",
+    "defaultValue": "0"
+  }
+]

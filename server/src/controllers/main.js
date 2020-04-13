@@ -27,6 +27,7 @@ const reset = async () => {
 
 const loadScenario = async (scenario) => {
   const scenarioPath = `${DATA_PATH}/${scenario}`;
+  scenario = scenario.replace(/\d+/g, '');
   data[scenario] = { sensorsData: [], actuators: [], validation: [] };
 
   await Promise.all([
@@ -46,6 +47,7 @@ const getScenarios = () => getDirectories(DATA_PATH);
 const checkIfScenarioExists = (scenario) => getScenarios().includes(scenario);
 
 const resetScenario = async (scenario) => {
+  scenario = scenario.replace(/\d+/g, '');
   await Promise.all([
     // Process actuators
     actuatorsController.reset(scenario, data[scenario]),
@@ -53,6 +55,7 @@ const resetScenario = async (scenario) => {
 };
 
 const startScenario = async (scenario, messageFrequency) => {
+  scenario = scenario.replace(/\d+/g, '');
   await resetScenario(scenario);
 
   // Start publishing Data
@@ -60,6 +63,7 @@ const startScenario = async (scenario, messageFrequency) => {
 };
 
 const validateScenario = async (scenario, messageFrequency) => {
+  scenario = scenario.replace(/\d+/g, '');
   await resetScenario(scenario);
 
   // Initiate validation state

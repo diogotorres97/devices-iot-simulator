@@ -1,0 +1,83 @@
+[
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "currently": {
+        "time": 1586554471,
+        "summary": "Clear",
+        "icon": "clear-night",
+        "precipIntensity": 0,
+        "precipProbability": 0,
+        "temperature": 18.1,
+        "apparentTemperature": 19.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "windGust": 2.66,
+        "windBearing": 332,
+        "cloudCover": 0.85,
+        "uvIndex": 0,
+        "visibility": 16.093,
+        "ozone": 306.3
+      }
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "currently": {
+        "time": 1586554471,
+        "summary": "Clear",
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "precipProbability": 0,
+        "temperature": 18.1,
+        "apparentTemperature": 19.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "windGust": 2.66,
+        "windBearing": 332,
+        "cloudCover": 0.85,
+        "uvIndex": 0,
+        "visibility": 16.093,
+        "ozone": 306.3
+      }
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "currently": {
+        "time": 1586554471,
+        "summary": "Clear",
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "precipProbability": 0,
+        "temperature": 18.1,
+        "apparentTemperature": 19.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "windGust": 2.66,
+        "windBearing": 332,
+        "cloudCover": 0.85,
+        "uvIndex": 0,
+        "visibility": 16.093,
+        "ozone": 306.3
+      }
+    }
+  }
+]

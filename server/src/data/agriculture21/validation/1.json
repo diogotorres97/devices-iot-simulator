@@ -1,0 +1,7 @@
+[
+  {
+    "topic": "roof-lux-controller",
+    "initialState": "OFF",
+    "finalState": "ON"
+  }
+]

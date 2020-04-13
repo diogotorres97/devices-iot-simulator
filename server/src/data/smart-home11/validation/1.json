@@ -1,0 +1,22 @@
+[
+  {
+    "topic": "water-heat-controller",
+    "initialState": "OFF",
+    "finalState": "OFF"
+  },
+  {
+    "topic": "lux-readings",
+    "initialState": 60,
+    "finalState": 60
+  },
+  {
+    "topic": "kitchen-lights",
+    "initialState": "OFF",
+    "finalState": "OFF"
+  },
+  {
+    "topic": "blinds-controller",
+    "initialState": "0",
+    "finalState": "0"
+  }
+]
