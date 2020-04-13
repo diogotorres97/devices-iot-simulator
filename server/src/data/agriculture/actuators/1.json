@@ -1,22 +1,22 @@
 [
   {
     "topic": "roof-window",
-    "defaultValue": 0
+    "defaultValue": "0"
   },
   {
     "topic": "roof-lux-controller",
-    "defaultValue": 0
+    "defaultValue": "0"
   },
   {
     "topic": "water-controller",
-    "defaultValue": 0
+    "defaultValue": "0"
   },
   {
     "topic": "alarm",
-    "defaultValue": 0
+    "defaultValue": "0"
   },
   {
     "topic": "heat-system",
-    "defaultValue": 0
+    "defaultValue": "0"
   }
 ]

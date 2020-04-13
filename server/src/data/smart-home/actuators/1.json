@@ -1,6 +1,6 @@
 [
   {
     "topic": "heat-system",
-    "defaultValue": 0
+    "defaultValue": "0"
   }
 ]

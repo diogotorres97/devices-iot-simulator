@@ -50,7 +50,7 @@ router.get('/:scenario/:actuator/status', (req, res) => {
 
   try {
     const device = mainController.getActuators(scenario)
-      .filter((elem) => elem.topic === actuator);
+      .filter((elem) => elem.topic === actuator)[0];
     res.status(200).send(device);
   } catch (error) {
     res.status(400).send(error.message);
