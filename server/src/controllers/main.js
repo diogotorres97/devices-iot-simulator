@@ -73,7 +73,7 @@ const validateScenario = async (scenario, messageFrequency) => {
   await sensorsDataController.publish(scenario, data[scenario], messageFrequency);
 
   // Sleep for few seconds
-  await sleep(5000);
+  await sleep(3000);
 
   // Validate actuators final state
   return validationController.validate(data[scenario]);

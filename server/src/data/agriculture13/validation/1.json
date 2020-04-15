@@ -7,7 +7,7 @@
   {
     "topic": "water-system",
     "initialState": "OFF",
-    "finalState": "ON"
+    "finalState": "OFF"
   },
   {
     "topic": "heat-system",

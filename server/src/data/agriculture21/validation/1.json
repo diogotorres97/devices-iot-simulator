@@ -1,7 +1,7 @@
 [
   {
     "topic": "roof-lux-controller",
-    "initialState": "OFF",
-    "finalState": "ON"
+    "initialState": "ON",
+    "finalState": "OFF"
   }
 ]

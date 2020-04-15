@@ -7,8 +7,8 @@
       "timezone": "Europe/Lisbon",
       "currently": {
         "time": 1586554471,
-        "summary": "Clear",
-        "icon": "clear-day",
+        "summary": "Sun",
+        "icon": "sun",
         "precipIntensity": 0,
         "precipProbability": 0,
         "temperature": 18.1,
