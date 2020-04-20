@@ -22,7 +22,12 @@ function consumeMessage(handleMessage) {
 
 function parseMessage(msg) {
   const messageString = msg.toString();
-  const messageObject = JSON.parse(JSON.stringify(messageString));
+  let messageObject;
+  try {
+    messageObject = JSON.parse(messageString);
+  } catch (e) {
+    messageObject = JSON.parse(JSON.stringify(messageString));
+  }
   console.log(`[MQTT] Consume a message: ${messageString}`);
   return messageObject;
 }
