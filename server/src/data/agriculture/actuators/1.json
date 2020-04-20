@@ -12,10 +12,6 @@
     "defaultValue": "0"
   },
   {
-    "topic": "alarm",
-    "defaultValue": "0"
-  },
-  {
     "topic": "heat-system",
     "defaultValue": "0"
   }

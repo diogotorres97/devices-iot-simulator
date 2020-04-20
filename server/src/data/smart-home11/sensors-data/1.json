@@ -2,109 +2,28 @@
   {
     "topic": "kitchen-motion-readings",
     "payload": {
-      "node-id": "SENSOR-NODE-3-MOZIoT",
+      "node-id": "sensor-2",
       "sensor": "pir-motion",
       "motion-bool": 0,
       "timestamp": 1585673980
     }
   },
   {
-    "topic": "forecasting",
-    "payload": {
-      "latitude": 41.1611,
-      "longitude": -8.614,
-      "timezone": "Europe/Lisbon",
-      "currently": {
-        "time": 1586554471,
-        "summary": "Rain",
-        "icon": "rain-day",
-        "precipIntensity": 0,
-        "precipProbability": 0,
-        "temperature": 18.1,
-        "apparentTemperature": 19.1,
-        "dewPoint": 12.13,
-        "humidity": 0.60,
-        "pressure": 1022.4,
-        "windSpeed": 1.32,
-        "windGust": 2.66,
-        "windBearing": 332,
-        "cloudCover": 0.85,
-        "uvIndex": 0,
-        "visibility": 16.093,
-        "ozone": 306.3
-      }
-    }
-  },
-  {
     "topic": "kitchen-motion-readings",
     "payload": {
-      "node-id": "SENSOR-NODE-3-MOZIoT",
+      "node-id": "sensor-2",
       "sensor": "pir-motion",
       "motion-bool": 1,
       "timestamp": 1585673980
     }
   },
   {
-    "topic": "forecasting",
-    "payload": {
-      "latitude": 41.1611,
-      "longitude": -8.614,
-      "timezone": "Europe/Lisbon",
-      "currently": {
-        "time": 1586554471,
-        "summary": "Rain",
-        "icon": "rain",
-        "precipIntensity": 0,
-        "precipProbability": 0,
-        "temperature": 18.1,
-        "apparentTemperature": 19.1,
-        "dewPoint": 12.13,
-        "humidity": 0.60,
-        "pressure": 1022.4,
-        "windSpeed": 1.32,
-        "windGust": 2.66,
-        "windBearing": 332,
-        "cloudCover": 0.85,
-        "uvIndex": 0,
-        "visibility": 16.093,
-        "ozone": 306.3
-      }
-    }
-  },
-  {
     "topic": "kitchen-motion-readings",
     "payload": {
-      "node-id": "SENSOR-NODE-3-MOZIoT",
+      "node-id": "sensor-2",
       "sensor": "pir-motion",
       "motion-bool": 1,
       "timestamp": 1585673980
-    }
-  },
-  {
-    "topic": "forecasting",
-    "payload": {
-      "latitude": 41.1611,
-      "longitude": -8.614,
-      "timezone": "Europe/Lisbon",
-      "currently": {
-        "time": 1586554471,
-        "summary": "Rain",
-        "icon": "rain",
-        "precipIntensity": 0,
-        "precipProbability": 0,
-        "temperature": 18.1,
-        "apparentTemperature": 19.1,
-        "dewPoint": 12.13,
-        "humidity": 0.60,
-        "pressure": 1022.4,
-        "windSpeed": 1.32,
-        "windGust": 2.66,
-        "windBearing": 332,
-        "cloudCover": 0.85,
-        "uvIndex": 0,
-        "visibility": 16.093,
-        "ozone": 306.3
-      }
     }
   }
 ]

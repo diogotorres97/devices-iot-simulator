@@ -1,50 +1,290 @@
 [
   {
-    "topic": "temp-hum-readings",
+    "topic": "kitchen-motion-readings",
     "payload": {
-      "node-id": "SENSOR-NODE-3-MOZIoT",
-      "sensor": "dht11",
-      "hum-percent": 36,
-      "temp-C": 25,
-      "heatindex-C": 14.712,
-      "dewpoint": 5.555468,
-      "timestamp": 1585673987
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 0,
+      "timestamp": 1585673980
     }
   },
   {
-    "topic": "temp-hum-readings",
+    "topic": "kitchen-motion-readings",
     "payload": {
-      "node-id": "SENSOR-NODE-3-MOZIoT",
-      "sensor": "dht11",
-      "hum-percent": 36,
-      "temp-C": 25,
-      "heatindex-C": 14.712,
-      "dewpoint": 5.555468,
-      "timestamp": 1585673987
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 1,
+      "timestamp": 1585673980
     }
   },
   {
-    "topic": "temp-hum-readings",
+    "topic": "kitchen-motion-readings",
     "payload": {
-      "node-id": "SENSOR-NODE-3-MOZIoT",
-      "sensor": "dht11",
-      "hum-percent": 36,
-      "temp-C": 19,
-      "heatindex-C": 14.712,
-      "dewpoint": 5.555468,
-      "timestamp": 1585673987
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 1,
+      "timestamp": 1585673980
     }
   },
   {
-    "topic": "temp-hum-readings",
+    "topic": "kitchen-motion-readings",
     "payload": {
-      "node-id": "SENSOR-NODE-3-MOZIoT",
-      "sensor": "dht11",
-      "hum-percent": 36,
-      "temp-C": 19,
-      "heatindex-C": 14.712,
-      "dewpoint": 5.555468,
-      "timestamp": 1585673987
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 0,
+      "timestamp": 1585673980
+    }
+  },
+  {
+    "topic": "kitchen-motion-readings",
+    "payload": {
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 0,
+      "timestamp": 1585673980
+    }
+  },
+  {
+    "topic": "kitchen-motion-readings",
+    "payload": {
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 1,
+      "timestamp": 1585673980
+    }
+  },
+  {
+    "topic": "kitchen-motion-readings",
+    "payload": {
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 1,
+      "timestamp": 1585673980
+    }
+  },
+  {
+    "topic": "kitchen-motion-readings",
+    "payload": {
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 0,
+      "timestamp": 1585673980
+    }
+  },
+  {
+    "topic": "kitchen-motion-readings",
+    "payload": {
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 0,
+      "timestamp": 1585673980
+    }
+  },
+  {
+    "topic": "kitchen-motion-readings",
+    "payload": {
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 1,
+      "timestamp": 1585673980
+    }
+  },
+  {
+    "topic": "kitchen-motion-readings",
+    "payload": {
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 1,
+      "timestamp": 1585673980
+    }
+  },
+  {
+    "topic": "kitchen-motion-readings",
+    "payload": {
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 0,
+      "timestamp": 1585673980
+    }
+  },
+  {
+    "topic": "kitchen-motion-readings",
+    "payload": {
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 0,
+      "timestamp": 1585673980
+    }
+  },
+  {
+    "topic": "kitchen-motion-readings",
+    "payload": {
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 1,
+      "timestamp": 1585673980
+    }
+  },
+  {
+    "topic": "kitchen-motion-readings",
+    "payload": {
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 1,
+      "timestamp": 1585673980
+    }
+  },
+  {
+    "topic": "kitchen-motion-readings",
+    "payload": {
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 0,
+      "timestamp": 1585673980
+    }
+  },
+  {
+    "topic": "kitchen-motion-readings",
+    "payload": {
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 0,
+      "timestamp": 1585673980
+    }
+  },
+  {
+    "topic": "kitchen-motion-readings",
+    "payload": {
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 1,
+      "timestamp": 1585673980
+    }
+  },
+  {
+    "topic": "kitchen-motion-readings",
+    "payload": {
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 1,
+      "timestamp": 1585673980
+    }
+  },
+  {
+    "topic": "kitchen-motion-readings",
+    "payload": {
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 0,
+      "timestamp": 1585673980
+    }
+  },
+  {
+    "topic": "kitchen-motion-readings",
+    "payload": {
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 0,
+      "timestamp": 1585673980
+    }
+  },
+  {
+    "topic": "kitchen-motion-readings",
+    "payload": {
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 1,
+      "timestamp": 1585673980
+    }
+  },
+  {
+    "topic": "kitchen-motion-readings",
+    "payload": {
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 1,
+      "timestamp": 1585673980
+    }
+  },
+  {
+    "topic": "kitchen-motion-readings",
+    "payload": {
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 0,
+      "timestamp": 1585673980
+    }
+  },
+  {
+    "topic": "kitchen-motion-readings",
+    "payload": {
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 0,
+      "timestamp": 1585673980
+    }
+  },
+  {
+    "topic": "kitchen-motion-readings",
+    "payload": {
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 1,
+      "timestamp": 1585673980
+    }
+  },
+  {
+    "topic": "kitchen-motion-readings",
+    "payload": {
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 1,
+      "timestamp": 1585673980
+    }
+  },
+  {
+    "topic": "kitchen-motion-readings",
+    "payload": {
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 0,
+      "timestamp": 1585673980
+    }
+  },
+  {
+    "topic": "kitchen-motion-readings",
+    "payload": {
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 0,
+      "timestamp": 1585673980
+    }
+  },
+  {
+    "topic": "kitchen-motion-readings",
+    "payload": {
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 1,
+      "timestamp": 1585673980
+    }
+  },
+  {
+    "topic": "kitchen-motion-readings",
+    "payload": {
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 1,
+      "timestamp": 1585673980
+    }
+  },
+  {
+    "topic": "kitchen-motion-readings",
+    "payload": {
+      "node-id": "sensor-2",
+      "sensor": "pir-motion",
+      "motion-bool": 0,
+      "timestamp": 1585673980
     }
   }
 ]

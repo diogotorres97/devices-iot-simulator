@@ -6,12 +6,12 @@
   },
   {
     "topic": "water-system",
-    "initialState": "OFF",
+    "initialState": "ON",
     "finalState": "OFF"
   },
   {
     "topic": "heat-system",
-    "initialState": "OFF",
+    "initialState": "ON",
     "finalState": "OFF"
   }
 ]

@@ -1,208 +1,1302 @@
 [
   {
-    "topic": "motion-readings",
-    "payload": {
-      "node-id": "SENSOR-NODE-3-MOZIoT",
-      "sensor": "pir-motion",
-      "motion-bool": 0,
-      "timestamp": 1585673980
-    }
-  },
-  {
     "topic": "temp-hum-readings",
     "payload": {
-      "node-id": "SENSOR-NODE-3-MOZIoT",
+      "node-id": "sensor-3",
       "sensor": "dht11",
-      "hum-percent": 36,
-      "temp-C": 21.2,
-      "heatindex-C": 14.712,
-      "dewpoint": 5.555468,
+      "hum-percent": 80,
+      "temp-C": 21,
       "timestamp": 1585673987
     }
   },
   {
-    "topic": "gas-mq135-readings",
+    "topic": "forecasting",
     "payload": {
-      "node-id": "sensor-node-1",
-      "sensor": "MQ135",
-      "read-ratio": 0.552451,
-      "co2-ppm": 397,
-      "timestamp": 1585674022
-    }
-  },
-  {
-    "topic": "lux-readings",
-    "payload": {
-      "node-id": "sensor-node-1",
-      "sensor": "LDR",
-      "analog-read": 68,
-      "lux": 3,
-      "timestamp": 1585674022
-    }
-  },
-  {
-    "topic": "gas-mq9-readings",
-    "payload": {
-      "node-id": "sensor-node-1",
-      "sensor": "MQ9",
-      "read-ratio": 9.8,
-      "co-ppm": 5,
-      "ch4-ppm": 11,
-      "lpg-ppm": 8,
-      "timestamp": 1585674022
-    }
-  },
-  {
-    "topic": "noise-readings",
-    "payload": {
-      "node-id": "sensor-node-1",
-      "sensor": "noise_sensor",
-      "noise-bool": 0,
-      "timestamp": 1585674022
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+        "time": 1586554471,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
     }
   },
   {
     "topic": "temp-hum-readings",
     "payload": {
-      "node-id": "SENSOR-NODE-3-MOZIoT",
+      "node-id": "sensor-3",
       "sensor": "dht11",
-      "hum-percent": 36,
-      "temp-C": 21.2,
-      "heatindex-C": 14.712,
-      "dewpoint": 5.555468,
+      "hum-percent": 80,
+      "temp-C": 21,
       "timestamp": 1585673988
     }
   },
   {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+        "time": 1586554471,
+        "icon": "rain",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+        "time": 1586554471,
+        "icon": "rain",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
     "topic": "temp-hum-readings",
     "payload": {
-      "node-id": "SENSOR-NODE-3-MOZIoT",
+      "node-id": "sensor-3",
       "sensor": "dht11",
-      "hum-percent": 36,
-      "temp-C": 21.2,
-      "heatindex-C": 14.712,
-      "dewpoint": 5.555468,
+      "hum-percent": 60,
+      "temp-C": 22.3,
       "timestamp": 1585673989
     }
   },
   {
-    "topic": "temp-hum-readings",
+    "topic": "forecasting",
     "payload": {
-      "node-id": "SENSOR-NODE-3-MOZIoT",
-      "sensor": "dht11",
-      "hum-percent": 36,
-      "temp-C": 21.8,
-      "heatindex-C": 14.712,
-      "dewpoint": 5.555468,
-      "timestamp": 1585673988
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554471,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
     }
   },
   {
     "topic": "temp-hum-readings",
     "payload": {
-      "node-id": "SENSOR-NODE-3-MOZIoT",
+      "node-id": "sensor-3",
       "sensor": "dht11",
-      "hum-percent": 36,
-      "temp-C": 60,
-      "heatindex-C": 14.712,
-      "dewpoint": 5.555468,
-      "timestamp": 1585673987
-    }
-  },
-  {
-    "topic": "temp-hum-readings",
-    "payload": {
-      "node-id": "SENSOR-NODE-3-MOZIoT",
-      "sensor": "dht11",
-      "hum-percent": 36,
-      "temp-C": 30,
-      "heatindex-C": 14.712,
-      "dewpoint": 5.555468,
-      "timestamp": 1585673987
-    }
-  },
-  {
-    "topic": "temp-hum-readings",
-    "payload": {
-      "node-id": "SENSOR-NODE-3-MOZIoT",
-      "sensor": "dht11",
-      "hum-percent": 36,
-      "temp-C": 21.2,
-      "heatindex-C": 14.712,
-      "dewpoint": 5.555468,
-      "timestamp": 1585673987
-    }
-  },
-  {
-    "topic": "temp-hum-readings",
-    "payload": {
-      "node-id": "SENSOR-NODE-3-MOZIoT",
-      "sensor": "dht11",
-      "hum-percent": 36,
-      "temp-C": 40,
-      "heatindex-C": 14.712,
-      "dewpoint": 5.555468,
-      "timestamp": 1585679987
-    }
-  },
-  {
-    "topic": "temp-hum-readings",
-    "payload": {
-      "node-id": "SENSOR-NODE-3-MOZIoT",
-      "sensor": "dht11",
-      "hum-percent": 36,
-      "temp-C": 21.2,
-      "heatindex-C": 14.712,
-      "dewpoint": 5.555468,
-      "timestamp": 1585676500
-    }
-  },
-  {
-    "topic": "temp-hum-readings",
-    "payload": {
-      "node-id": "SENSOR-NODE-3-MOZIoT",
-      "sensor": "dht11",
-      "hum-percent": 36,
+      "hum-percent": 80,
       "temp-C": 24,
-      "heatindex-C": 14.712,
-      "dewpoint": 5.555468,
-      "timestamp": 1585674050
+      "timestamp": 1585673990
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554475,
+      "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
     }
   },
   {
     "topic": "temp-hum-readings",
     "payload": {
-      "node-id": "SENSOR-NODE-3-MOZIoT",
+      "node-id": "sensor-3",
       "sensor": "dht11",
-      "hum-percent": 36,
-      "temp-C": 23,
-      "heatindex-C": 14.712,
-      "dewpoint": 5.555468,
-      "timestamp": 1585674000
+      "hum-percent": 80,
+      "temp-C": 24.1,
+      "timestamp": 1585673991
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554480,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
     }
   },
   {
     "topic": "temp-hum-readings",
     "payload": {
-      "node-id": "SENSOR-NODE-3-MOZIoT",
+      "node-id": "sensor-3",
       "sensor": "dht11",
-      "hum-percent": 36,
-      "temp-C": 21.2,
-      "heatindex-C": 14.712,
-      "dewpoint": 5.555468,
+      "hum-percent": 80,
+      "temp-C": 21,
+      "timestamp": 1585673987
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554480,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 80,
+      "temp-C": 21,
+      "timestamp": 1585673988
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554480,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 60,
+      "temp-C": 18,
       "timestamp": 1585673989
     }
   },
   {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554480,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
     "topic": "temp-hum-readings",
     "payload": {
-      "node-id": "SENSOR-NODE-3-MOZIoT",
+      "node-id": "sensor-3",
       "sensor": "dht11",
-      "hum-percent": 36,
-      "temp-C": 21.3,
-      "heatindex-C": 14.712,
-      "dewpoint": 5.555468,
+      "hum-percent": 60,
+      "temp-C": 18,
+      "timestamp": 1585673989
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554480,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 80,
+      "temp-C": 21,
+      "timestamp": 1585673987
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+        "time": 1586554471,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 80,
+      "temp-C": 21,
       "timestamp": 1585673988
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+        "time": 1586554471,
+        "icon": "rain",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+        "time": 1586554471,
+        "icon": "rain",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 60,
+      "temp-C": 22.3,
+      "timestamp": 1585673989
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554471,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 80,
+      "temp-C": 24,
+      "timestamp": 1585673990
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554475,
+      "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 80,
+      "temp-C": 24.1,
+      "timestamp": 1585673991
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554480,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 80,
+      "temp-C": 21,
+      "timestamp": 1585673987
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554480,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 80,
+      "temp-C": 21,
+      "timestamp": 1585673988
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554480,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 60,
+      "temp-C": 18,
+      "timestamp": 1585673989
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554480,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 60,
+      "temp-C": 18,
+      "timestamp": 1585673989
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554480,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 80,
+      "temp-C": 21,
+      "timestamp": 1585673987
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+        "time": 1586554471,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 80,
+      "temp-C": 21,
+      "timestamp": 1585673988
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+        "time": 1586554471,
+        "icon": "rain",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+        "time": 1586554471,
+        "icon": "rain",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 60,
+      "temp-C": 22.3,
+      "timestamp": 1585673989
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554471,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 80,
+      "temp-C": 24,
+      "timestamp": 1585673990
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554475,
+      "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 80,
+      "temp-C": 24.1,
+      "timestamp": 1585673991
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554480,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 80,
+      "temp-C": 21,
+      "timestamp": 1585673987
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554480,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 80,
+      "temp-C": 21,
+      "timestamp": 1585673988
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554480,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 60,
+      "temp-C": 18,
+      "timestamp": 1585673989
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554480,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 60,
+      "temp-C": 18,
+      "timestamp": 1585673989
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554480,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 80,
+      "temp-C": 21,
+      "timestamp": 1585673987
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+        "time": 1586554471,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 80,
+      "temp-C": 21,
+      "timestamp": 1585673988
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+        "time": 1586554471,
+        "icon": "rain",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+        "time": 1586554471,
+        "icon": "rain",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 60,
+      "temp-C": 22.3,
+      "timestamp": 1585673989
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554471,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 80,
+      "temp-C": 24,
+      "timestamp": 1585673990
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554475,
+      "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 80,
+      "temp-C": 24.1,
+      "timestamp": 1585673991
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554480,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 80,
+      "temp-C": 21,
+      "timestamp": 1585673987
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554480,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 80,
+      "temp-C": 21,
+      "timestamp": 1585673988
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554480,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 60,
+      "temp-C": 18,
+      "timestamp": 1585673989
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554480,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 60,
+      "temp-C": 18,
+      "timestamp": 1585673989
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554480,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 80,
+      "temp-C": 21,
+      "timestamp": 1585673987
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+        "time": 1586554471,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 80,
+      "temp-C": 21,
+      "timestamp": 1585673988
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+        "time": 1586554471,
+        "icon": "rain",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+        "time": 1586554471,
+        "icon": "rain",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 60,
+      "temp-C": 22.3,
+      "timestamp": 1585673989
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554471,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 80,
+      "temp-C": 24,
+      "timestamp": 1585673990
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554475,
+      "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 80,
+      "temp-C": 24.1,
+      "timestamp": 1585673991
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554480,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 80,
+      "temp-C": 21,
+      "timestamp": 1585673987
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554480,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 80,
+      "temp-C": 21,
+      "timestamp": 1585673988
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554480,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 60,
+      "temp-C": 18,
+      "timestamp": 1585673989
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554480,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "sensor-3",
+      "sensor": "dht11",
+      "hum-percent": 60,
+      "temp-C": 18,
+      "timestamp": 1585673989
+    }
+  },
+  {
+    "topic": "forecasting",
+    "payload": {
+      "latitude": 41.1611,
+      "longitude": -8.614,
+      "timezone": "Europe/Lisbon",
+      "time": 1586554480,
+        "icon": "clear-day",
+        "precipIntensity": 0,
+        "temperature": 18.1,
+        "dewPoint": 12.13,
+        "humidity": 0.60,
+        "pressure": 1022.4,
+        "windSpeed": 1.32,
+        "ozone": 306.3
     }
   }
 ]

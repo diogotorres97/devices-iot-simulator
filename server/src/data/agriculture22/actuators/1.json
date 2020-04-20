@@ -2,5 +2,9 @@
   {
     "topic": "roof-lux-controller",
     "defaultValue": "OFF"
+  },
+  {
+    "topic": "roof-window",
+    "defaultValue": "0"
   }
 ]

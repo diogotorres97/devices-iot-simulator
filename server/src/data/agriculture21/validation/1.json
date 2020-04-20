@@ -3,5 +3,10 @@
     "topic": "roof-lux-controller",
     "initialState": "ON",
     "finalState": "OFF"
+  },
+  {
+    "topic": "roof-window",
+    "initialState": "0",
+    "finalState": "0"
   }
 ]

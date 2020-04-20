@@ -1,7 +1,0 @@
-[
-  {
-    "topic": "heat-system",
-    "initialState": "OFF",
-    "finalState": "ON"
-  }
-]

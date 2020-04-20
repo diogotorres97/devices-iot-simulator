@@ -1,17 +1,17 @@
 [
   {
     "topic": "roof-window",
-    "initialState": "0",
+    "initialState": "1",
     "finalState": "0"
   },
   {
     "topic": "water-system",
-    "initialState": "ON",
-    "finalState": "OFF"
+    "initialState": "OFF",
+    "finalState": "ON"
   },
   {
     "topic": "heat-system",
-    "initialState": "ON",
-    "finalState": "OFF"
+    "initialState": "OFF",
+    "finalState": "ON"
   }
 ]

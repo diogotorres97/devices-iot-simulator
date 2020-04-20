@@ -1,6 +1,14 @@
 [
   {
-    "topic": "heat-system",
-    "defaultValue": "0"
+    "topic": "water-heat-controller",
+    "defaultValue": "OFF"
+  },
+  {
+    "topic": "kitchen-lights",
+    "defaultValue": "OFF"
+  },
+  {
+    "topic": "coffee-machine",
+    "defaultValue": "OFF"
   }
 ]
