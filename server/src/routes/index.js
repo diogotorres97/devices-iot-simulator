@@ -6,10 +6,12 @@ const router = require('express').Router();
 
 const main = require('./main');
 const scenario = require('./scenario');
+const metrics = require('./metrics');
 
 
 router.use('/', main);
 router.use('/', scenario);
+router.use('/', metrics);
 
 
 module.exports = router;
