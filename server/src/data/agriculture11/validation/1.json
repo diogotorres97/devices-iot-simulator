@@ -1,8 +1,8 @@
 [
   {
     "topic": "roof-window",
-    "initialState": "0",
-    "finalState": "0"
+    "initialState": "CLOSE",
+    "finalState": "CLOSE"
   },
   {
     "topic": "water-system",

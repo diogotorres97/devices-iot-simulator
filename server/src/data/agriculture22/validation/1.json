@@ -6,7 +6,7 @@
   },
   {
     "topic": "roof-window",
-    "initialState": "1",
-    "finalState": "0"
+    "initialState": "OPEN",
+    "finalState": "CLOSE"
   }
 ]

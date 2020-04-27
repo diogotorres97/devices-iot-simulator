@@ -1,18 +1,18 @@
 [
   {
     "topic": "roof-window",
-    "defaultValue": "0"
+    "defaultValue": "CLOSE"
   },
   {
     "topic": "roof-lux-controller",
-    "defaultValue": "0"
+    "defaultValue": "CLOSE"
   },
   {
     "topic": "water-controller",
-    "defaultValue": "0"
+    "defaultValue": "CLOSE"
   },
   {
     "topic": "heat-system",
-    "defaultValue": "0"
+    "defaultValue": "CLOSE"
   }
 ]

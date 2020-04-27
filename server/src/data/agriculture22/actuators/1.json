@@ -5,6 +5,6 @@
   },
   {
     "topic": "roof-window",
-    "defaultValue": "0"
+    "defaultValue": "CLOSE"
   }
 ]
