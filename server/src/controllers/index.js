@@ -3,5 +3,5 @@ const metricsController = require('./metrics');
 
 module.exports = {
   mainController,
-  metricsController
+  metricsController,
 };
