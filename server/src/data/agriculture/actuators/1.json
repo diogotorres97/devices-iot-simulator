@@ -5,14 +5,14 @@
   },
   {
     "topic": "roof-lux-controller",
-    "defaultValue": "CLOSE"
+    "defaultValue": "OFF"
   },
   {
     "topic": "water-controller",
-    "defaultValue": "CLOSE"
+    "defaultValue": "OFF"
   },
   {
     "topic": "heat-system",
-    "defaultValue": "CLOSE"
+    "defaultValue": "OFF"
   }
 ]
