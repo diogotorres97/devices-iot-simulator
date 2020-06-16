@@ -36,6 +36,7 @@ const loadScenario = async (scenario) => {
     // Process actuators
     actuatorsController.initialize(scenario, scenarioPath, data[scenario]),
 
+    // Process actuators initial and expected final state
     validationController.load(scenarioPath, data[scenario]),
   ]);
 };
@@ -52,7 +53,6 @@ const resetScenario = async (scenario) => {
 };
 
 const startScenario = async (scenario, messageFrequency) => {
-  // Sanity check to clear queues
   await resetScenario(scenario);
 
   // Start publishing Data
@@ -60,7 +60,6 @@ const startScenario = async (scenario, messageFrequency) => {
 };
 
 const validateScenario = async (scenario, messageFrequency) => {
-  // Sanity check to clear queues
   await resetScenario(scenario);
 
   // Initiate validation state
@@ -80,10 +79,29 @@ const getActuators = (scenario) => data[scenario].actuators;
 
 const getsensorsData = (scenario) => data[scenario].sensorsData;
 
+const getScenariosInfo = () => {
+  const result = {};
+  const scenarios = getScenarios();
+  scenarios.forEach((scenario) => {
+    result[scenario] = getScenarioInfo(scenario);
+  });
+
+  return result;
+};
+
+const getScenarioInfo = (scenario) => ({
+  actuatorsQueues: actuatorsController.getTopics(data[scenario]),
+  sensorsQueues: sensorsDataController.getTopics(data[scenario]),
+});
+
+
 module.exports = {
   load,
   start,
   reset,
+  getScenarios,
+  getScenariosInfo,
+  getScenarioInfo,
   checkIfScenarioExists,
   loadScenario,
   startScenario,

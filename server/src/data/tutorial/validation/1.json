@@ -1,6 +1,6 @@
 [
   {
-    "topic": "heat-system",
+    "topic": "alarm",
     "initialState": "OFF",
     "finalState": "ON"
   }

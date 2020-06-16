@@ -5,9 +5,11 @@ const router = require('express').Router();
  ++++++++++++++++++++++++++++++++++++++++++++++*/
 
 const main = require('./main');
+const scenario = require('./scenario');
 
 
 router.use('/', main);
+router.use('/', scenario);
 
 
 module.exports = router;

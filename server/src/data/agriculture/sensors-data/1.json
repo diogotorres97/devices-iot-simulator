@@ -1,209 +1,208 @@
 [
-    {
-      "topic": "motion-readings",
-      "payload": {
-        "node-id": "SENSOR-NODE-3-MOZIoT",
-        "sensor": "pir-motion",
-        "motion-bool": 0,
-        "timestamp": 1585673980
-      }
-    },
-    {
-      "topic": "temp-hum-readings",
-      "payload": {
-        "node-id": "SENSOR-NODE-3-MOZIoT",
-        "sensor": "dht11",
-        "hum-percent": 36,
-        "temp-C": 21.2,
-        "heatindex-C": 14.712,
-        "dewpoint": 5.555468,
-        "timestamp": 1585673987
-      }
-    },
-    {
-      "topic": "gas-mq135-readings",
-      "payload": {
-        "node-id": "sensor-node-1",
-        "sensor": "MQ135",
-        "read-ratio": 0.552451,
-        "co2-ppm": 397,
-        "timestamp": 1585674022
-      }
-    },
-    {
-      "topic": "lux-readings",
-      "payload": {
-        "node-id": "sensor-node-1",
-        "sensor": "LDR",
-        "analog-read": 68,
-        "lux": 3,
-        "timestamp": 1585674022
-      }
-    },
-    {
-      "topic": "gas-mq9-readings",
-      "payload": {
-        "node-id": "sensor-node-1",
-        "sensor": "MQ9",
-        "read-ratio": 9.8,
-        "co-ppm": 5,
-        "ch4-ppm": 11,
-        "lpg-ppm": 8,
-        "timestamp": 1585674022
-      }
-    },
-    {
-      "topic": "noise-readings",
-      "payload": {
-        "node-id": "sensor-node-1",
-        "sensor": "noise_sensor",
-        "noise-bool": 0,
-        "timestamp": 1585674022
-      }
-    },
-    {
-      "topic": "temp-hum-readings",
-      "payload": {
-        "node-id": "SENSOR-NODE-3-MOZIoT",
-        "sensor": "dht11",
-        "hum-percent": 36,
-        "temp-C": 21.2,
-        "heatindex-C": 14.712,
-        "dewpoint": 5.555468,
-        "timestamp": 1585673988
-      }
-    },
-    {
-      "topic": "temp-hum-readings",
-      "payload": {
-        "node-id": "SENSOR-NODE-3-MOZIoT",
-        "sensor": "dht11",
-        "hum-percent": 36,
-        "temp-C": 21.2,
-        "heatindex-C": 14.712,
-        "dewpoint": 5.555468,
-        "timestamp": 1585673989
-      }
-    },
-    {
-      "topic": "temp-hum-readings",
-      "payload": {
-        "node-id": "SENSOR-NODE-3-MOZIoT",
-        "sensor": "dht11",
-        "hum-percent": 36,
-        "temp-C": 21.8,
-        "heatindex-C": 14.712,
-        "dewpoint": 5.555468,
-        "timestamp": 1585673988
-      }
-    },
-    {
-      "topic": "temp-hum-readings",
-      "payload": {
-        "node-id": "SENSOR-NODE-3-MOZIoT",
-        "sensor": "dht11",
-        "hum-percent": 36,
-        "temp-C": 60,
-        "heatindex-C": 14.712,
-        "dewpoint": 5.555468,
-        "timestamp": 1585673987
-      }
-    },
-    {
-      "topic": "temp-hum-readings",
-      "payload": {
-        "node-id": "SENSOR-NODE-3-MOZIoT",
-        "sensor": "dht11",
-        "hum-percent": 36,
-        "temp-C": 30,
-        "heatindex-C": 14.712,
-        "dewpoint": 5.555468,
-        "timestamp": 1585673987
-      }
-    },
-    {
-      "topic": "temp-hum-readings",
-      "payload": {
-        "node-id": "SENSOR-NODE-3-MOZIoT",
-        "sensor": "dht11",
-        "hum-percent": 36,
-        "temp-C": 21.2,
-        "heatindex-C": 14.712,
-        "dewpoint": 5.555468,
-        "timestamp": 1585673987
-      }
-    },
-    {
-      "topic": "temp-hum-readings",
-      "payload": {
-        "node-id": "SENSOR-NODE-3-MOZIoT",
-        "sensor": "dht11",
-        "hum-percent": 36,
-        "temp-C": 40,
-        "heatindex-C": 14.712,
-        "dewpoint": 5.555468,
-        "timestamp": 1585679987
-      }
-    },
-    {
-      "topic": "temp-hum-readings",
-      "payload": {
-        "node-id": "SENSOR-NODE-3-MOZIoT",
-        "sensor": "dht11",
-        "hum-percent": 36,
-        "temp-C": 21.2,
-        "heatindex-C": 14.712,
-        "dewpoint": 5.555468,
-        "timestamp": 1585676500
-      }
-    },
-    {
-      "topic": "temp-hum-readings",
-      "payload": {
-        "node-id": "SENSOR-NODE-3-MOZIoT",
-        "sensor": "dht11",
-        "hum-percent": 36,
-        "temp-C": 24,
-        "heatindex-C": 14.712,
-        "dewpoint": 5.555468,
-        "timestamp": 1585674050
-      }
-    },
-    {
-      "topic": "temp-hum-readings",
-      "payload": {
-        "node-id": "SENSOR-NODE-3-MOZIoT",
-        "sensor": "dht11",
-        "hum-percent": 36,
-        "temp-C": 23,
-        "heatindex-C": 14.712,
-        "dewpoint": 5.555468,
-        "timestamp": 1585674000
-      }
-    },
-    {
-      "topic": "temp-hum-readings",
-      "payload": {
-        "node-id": "SENSOR-NODE-3-MOZIoT",
-        "sensor": "dht11",
-        "hum-percent": 36,
-        "temp-C": 21.2,
-        "heatindex-C": 14.712,
-        "dewpoint": 5.555468,
-        "timestamp": 1585673989
-      }
-    },
-    {
-      "topic": "temp-hum-readings",
-      "payload": {
-        "node-id": "SENSOR-NODE-3-MOZIoT",
-        "sensor": "dht11",
-        "hum-percent": 36,
-        "temp-C": 21.3,
-        "heatindex-C": 14.712,
-        "dewpoint": 5.555468,
-        "timestamp": 1585673988
-      }
+  {
+    "topic": "motion-readings",
+    "payload": {
+      "node-id": "SENSOR-NODE-3-MOZIoT",
+      "sensor": "pir-motion",
+      "motion-bool": 0,
+      "timestamp": 1585673980
     }
-
-  ]
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "SENSOR-NODE-3-MOZIoT",
+      "sensor": "dht11",
+      "hum-percent": 36,
+      "temp-C": 21.2,
+      "heatindex-C": 14.712,
+      "dewpoint": 5.555468,
+      "timestamp": 1585673987
+    }
+  },
+  {
+    "topic": "gas-mq135-readings",
+    "payload": {
+      "node-id": "sensor-node-1",
+      "sensor": "MQ135",
+      "read-ratio": 0.552451,
+      "co2-ppm": 397,
+      "timestamp": 1585674022
+    }
+  },
+  {
+    "topic": "lux-readings",
+    "payload": {
+      "node-id": "sensor-node-1",
+      "sensor": "LDR",
+      "analog-read": 68,
+      "lux": 3,
+      "timestamp": 1585674022
+    }
+  },
+  {
+    "topic": "gas-mq9-readings",
+    "payload": {
+      "node-id": "sensor-node-1",
+      "sensor": "MQ9",
+      "read-ratio": 9.8,
+      "co-ppm": 5,
+      "ch4-ppm": 11,
+      "lpg-ppm": 8,
+      "timestamp": 1585674022
+    }
+  },
+  {
+    "topic": "noise-readings",
+    "payload": {
+      "node-id": "sensor-node-1",
+      "sensor": "noise_sensor",
+      "noise-bool": 0,
+      "timestamp": 1585674022
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "SENSOR-NODE-3-MOZIoT",
+      "sensor": "dht11",
+      "hum-percent": 36,
+      "temp-C": 21.2,
+      "heatindex-C": 14.712,
+      "dewpoint": 5.555468,
+      "timestamp": 1585673988
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "SENSOR-NODE-3-MOZIoT",
+      "sensor": "dht11",
+      "hum-percent": 36,
+      "temp-C": 21.2,
+      "heatindex-C": 14.712,
+      "dewpoint": 5.555468,
+      "timestamp": 1585673989
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "SENSOR-NODE-3-MOZIoT",
+      "sensor": "dht11",
+      "hum-percent": 36,
+      "temp-C": 21.8,
+      "heatindex-C": 14.712,
+      "dewpoint": 5.555468,
+      "timestamp": 1585673988
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "SENSOR-NODE-3-MOZIoT",
+      "sensor": "dht11",
+      "hum-percent": 36,
+      "temp-C": 60,
+      "heatindex-C": 14.712,
+      "dewpoint": 5.555468,
+      "timestamp": 1585673987
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "SENSOR-NODE-3-MOZIoT",
+      "sensor": "dht11",
+      "hum-percent": 36,
+      "temp-C": 30,
+      "heatindex-C": 14.712,
+      "dewpoint": 5.555468,
+      "timestamp": 1585673987
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "SENSOR-NODE-3-MOZIoT",
+      "sensor": "dht11",
+      "hum-percent": 36,
+      "temp-C": 21.2,
+      "heatindex-C": 14.712,
+      "dewpoint": 5.555468,
+      "timestamp": 1585673987
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "SENSOR-NODE-3-MOZIoT",
+      "sensor": "dht11",
+      "hum-percent": 36,
+      "temp-C": 40,
+      "heatindex-C": 14.712,
+      "dewpoint": 5.555468,
+      "timestamp": 1585679987
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "SENSOR-NODE-3-MOZIoT",
+      "sensor": "dht11",
+      "hum-percent": 36,
+      "temp-C": 21.2,
+      "heatindex-C": 14.712,
+      "dewpoint": 5.555468,
+      "timestamp": 1585676500
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "SENSOR-NODE-3-MOZIoT",
+      "sensor": "dht11",
+      "hum-percent": 36,
+      "temp-C": 24,
+      "heatindex-C": 14.712,
+      "dewpoint": 5.555468,
+      "timestamp": 1585674050
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "SENSOR-NODE-3-MOZIoT",
+      "sensor": "dht11",
+      "hum-percent": 36,
+      "temp-C": 23,
+      "heatindex-C": 14.712,
+      "dewpoint": 5.555468,
+      "timestamp": 1585674000
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "SENSOR-NODE-3-MOZIoT",
+      "sensor": "dht11",
+      "hum-percent": 36,
+      "temp-C": 21.2,
+      "heatindex-C": 14.712,
+      "dewpoint": 5.555468,
+      "timestamp": 1585673989
+    }
+  },
+  {
+    "topic": "temp-hum-readings",
+    "payload": {
+      "node-id": "SENSOR-NODE-3-MOZIoT",
+      "sensor": "dht11",
+      "hum-percent": 36,
+      "temp-C": 21.3,
+      "heatindex-C": 14.712,
+      "dewpoint": 5.555468,
+      "timestamp": 1585673988
+    }
+  }
+]
