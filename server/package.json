@@ -1,5 +1,5 @@
 {
-  "name": "sensors-fake-server",
+  "name": "devices-iot-simulator",
   "version": "1.0.0",
   "description": "",
   "main": "src/app.js",

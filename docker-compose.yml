@@ -1,14 +1,14 @@
 version: "3"
 
 services:
-  sensors-fake-server:
-    image: sensors-fake-server
+  devices-iot-simulator:
+    image: devices-iot-simulator
     command: npm run dev
     build: server
     volumes:
       - ./server:/usr/src/app
       - /usr/src/app/node_modules
-    container_name: sensors-fake-server
+    container_name: devices-iot-simulator
     ports:
       - 3000:3000
     environment:
